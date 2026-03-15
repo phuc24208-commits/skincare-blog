@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Skincare Blog</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f5f1ed;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+background:#8b5e3c;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:#e6d3c3;
+text-align:center;
+padding:10px;
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:#5a3d2b;
+font-weight:bold;
+}
+
+/* BANNER */
+
+.hero{
+background:url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+height:300px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:32px;
+font-weight:bold;
+text-shadow:0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* POSTS */
+
+.posts{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.post{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.post:hover{
+transform:translateY(-5px);
+}
+
+.post img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.post-content{
+padding:20px;
+}
+
+.read{
+padding:8px 15px;
+background:#a47148;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+margin-top:10px;
+}
+
+.read:hover{
+background:#6b4f3b;
+}
+
+.full-post{
+display:none;
+margin-top:10px;
+line-height:1.6;
+}
+
+/* ABOUT */
+
+.about{
+background:white;
+padding:30px;
+margin-top:40px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+line-height:1.6;
+}
+
+.about h2{
+color:#6b4f3b;
+}
+
+/* FOOTER */
+
+footer{
+background:#8b5e3c;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>My Skincare Blog</h1>
+<p>Chia sẻ kinh nghiệm chăm sóc da</p>
+</header>
+
+<nav>
+<a href="#">Trang chủ</a>
+<a href="#">Routine</a>
+<a href="#">Review</a>
+<a href="#">Tips</a>
+<a href="#">Liên hệ</a>
+</nav>
+
+<div class="hero">
+Skincare mỗi ngày ✨
+</div>
+
+<div class="container">
+
+<h2>Bài viết mới</h2>
+
+<div class="posts">
+
+<!-- POST 1 -->
+
+<div class="post">
+
+<img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80">
+
+<div class="post-content">
+
+<h3>Routine skincare buổi sáng</h3>
+
+<p>Các bước chăm sóc da buổi sáng giúp da khỏe và sáng.</p>
+
+<button class="read" onclick="togglePost('post1')">Đọc thêm</button>
+
+<div id="post1" class="full-post">
+
+<p><b>1. Sữa rửa mặt:</b> làm sạch dầu và bụi bẩn.</p>
+
+<p><b>2. Toner:</b> cân bằng độ pH cho da.</p>
+
+<p><b>3. Serum:</b> cung cấp vitamin và dưỡng chất.</p>
+
+<p><b>4. Kem dưỡng:</b> giữ ẩm và bảo vệ da.</p>
+
+<p><b>5. Kem chống nắng:</b> bước quan trọng nhất để chống tia UV.</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- POST 2 -->
+
+<div class="post">
+
+<img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=80">
+
+<div class="post-content">
+
+<h3>Top serum Vitamin C</h3>
+
+<p>Serum Vitamin C giúp da sáng và giảm thâm.</p>
+
+<button class="read" onclick="togglePost('post2')">Đọc thêm</button>
+
+<div id="post2" class="full-post">
+
+<p>Vitamin C giúp:</p>
+
+<p>✔ Làm sáng da</p>
+
+<p>✔ Giảm thâm mụn</p>
+
+<p>✔ Chống oxy hóa</p>
+
+<p>✔ Kích thích sản sinh collagen</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- POST 3 -->
+
+<div class="post">
+
+<img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=800&q=80">
+
+<div class="post-content">
+
+<h3>Tại sao phải dùng kem chống nắng?</h3>
+
+<p>Kem chống nắng giúp bảo vệ da khỏi tia UV.</p>
+
+<button class="read" onclick="togglePost('post3')">Đọc thêm</button>
+
+<div id="post3" class="full-post">
+
+<p>Tia UV có thể gây:</p>
+
+<p>• Lão hóa da</p>
+
+<p>• Sạm da</p>
+
+<p>• Nếp nhăn</p>
+
+<p>• Ung thư da</p>
+
+<p>Vì vậy hãy dùng kem chống nắng mỗi ngày.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ABOUT -->
+
+<div class="about">
+
+<h2>About us</h2>
+
+<p>
+Đây là blog cá nhân chia sẻ trải nghiệm của Phúc và Thư
+về skincare, review mỹ phẩm và các tips chăm sóc da hằng ngày.
+</p>
+
+<p>
+Chúng mình tạo blog này để ghi lại hành trình chăm sóc da
+và chia sẻ những kinh nghiệm thực tế sau khi thử nhiều sản phẩm khác nhau.
+Hy vọng những bài viết ở đây sẽ giúp bạn tìm được routine skincare phù hợp.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 My Skincare Blog
+</footer>
+
+<script>
+
+function togglePost(id){
+
+let post=document.getElementById(id)
+
+if(post.style.display==="block"){
+post.style.display="none"
+}else{
+post.style.display="block"
+}
+
+}
+
+</script>
+
+</body>
+</html>
